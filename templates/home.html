@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>CMS</title>
+{% endblock head %}
+
+
+{% block body %}
+
+    <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">Coming Soon!</h5>
+          <p class="card-text">This site is still under development!</p>
+          <a href="{% url 'about' %}" class="btn btn-primary">About this site</a>
+        </div>
+        <div class="card-footer text-muted">
+          victor.musembi11@gmail.com
+        </div>
+    </div>
+
+{% endblock body %}
