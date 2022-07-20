@@ -20,6 +20,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Load environment variables
 load_dotenv()
 
+
+def get_bool_env(env_var: bool, default=False) -> bool:
+    """Get boolean environment variable."""
+    assert default is False or default is True
+
+    return os.getenv(env_var) if not None else default
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
@@ -27,7 +35,7 @@ load_dotenv()
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG')
+DEBUG = get_bool_env('DEBUG')
 
 ALLOWED_HOSTS = []
 
