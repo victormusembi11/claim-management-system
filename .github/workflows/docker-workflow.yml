@@ -1,10 +1,6 @@
 name: CI to Docker Hub
 
 on:
-  workflow_run:
-    workflows: [ "cms" ]
-    types:
-      - completed
     branches: 
       - develop
     tags:
