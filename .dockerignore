@@ -1,0 +1,8 @@
+.*
+.coveragerc
+.env
+.git/
+*.pyc
+__pycache__
+docker-compose.yml
+.dockerignore
