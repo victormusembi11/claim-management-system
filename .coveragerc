@@ -7,3 +7,6 @@ omit =
     */__init__.py
     config/*
     manage.py
+
+[report]
+show_missing = True
