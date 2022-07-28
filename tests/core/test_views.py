@@ -11,9 +11,7 @@ class TestCoreAppView(TestCase):
     def test_home_view(self):
         response = self.client.get(self.home_url, format='text/html')
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'home.html')
 
     def test_about_view(self):
         response = self.client.get(self.about_url, format='text/html')
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'about.html')
