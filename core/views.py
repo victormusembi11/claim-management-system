@@ -11,4 +11,4 @@ class HomeView(TemplateView):
 class AboutView(TemplateView):
 
     def get(self, request):
-        return render(request, 'about.html', content_type='text/html')    
+        return render(request, 'about.html', content_type='text/html')
