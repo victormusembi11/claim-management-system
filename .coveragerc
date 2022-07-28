@@ -3,6 +3,7 @@ omit =
     venv/*
     staticfiles/*
     migrations/*
+    tests/*
     */__init__.py
     config/*
     manage.py
