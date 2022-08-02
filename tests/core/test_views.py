@@ -1,12 +1,12 @@
 from django.test import TestCase
-from django.urls import reverse
+from django.urls import reverse_lazy
 
 
 class TestCoreAppView(TestCase):
 
     def setUp(self):
-        self.home_url = reverse('core:home')
-        self.about_url = reverse('core:about')
+        self.home_url = reverse_lazy('core:home')
+        self.about_url = reverse_lazy('core:about')
         return super().setUp()
 
     def test_home_view_success(self):
