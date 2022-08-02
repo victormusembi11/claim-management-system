@@ -19,6 +19,7 @@ pyparsing==3.0.9
 pytest==7.1.2
 pytest-cov==3.0.0
 pytest-django==4.5.2
+pytest-faulthandler==2.0.1
 python-dotenv==0.20.0
 six==1.16.0
 sqlparse==0.4.2
