@@ -1,8 +1,10 @@
-from django.shortcuts import render
-from django.views.generic import View
+from django.views.generic import CreateView
+
+from ..forms import UserRegistrationForm
 
 
-class RegistrationView(View):
+class RegistrationView(CreateView):
 
-    def get(self, request):
-        return render(request, 'registration/register.html')
+    form_class = UserRegistrationForm
+    template_name = 'registration/register.html'
+    success_url = 'registration/login'
