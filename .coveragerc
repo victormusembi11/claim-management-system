@@ -1,10 +1,6 @@
 [run]
 omit =
-    venv/*
-    test/*
-    staticfiles/*
-    migrations/*
-    */__init__.py
+    */migrations/*
     config/*
     manage.py
     tests/*
