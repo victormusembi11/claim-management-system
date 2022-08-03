@@ -1,5 +1,6 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.forms import ValidationError
 
 
 class UserRegistrationForm(UserCreationForm):
@@ -18,3 +19,11 @@ class UserRegistrationForm(UserCreationForm):
                     'class': 'form-control'
                 }
             )
+
+    def clean(self) -> dict:
+        email = self.cleaned_data.get('email')
+        if User.objects.filter(email=email).exists():
+            self.add_error(
+                'email', ValidationError('Email address already exists!')
+            )
+        return super().clean()
